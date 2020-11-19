@@ -16,10 +16,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 @app.route("/")
-@app.route("/login")
+@app.route("/review")
 def login():
     books = list(mongo.db.books.find())
-    return render_template("login.html", books=books)
+    return render_template("review.html", books=books)
 
 
 if __name__ == "__main__":
