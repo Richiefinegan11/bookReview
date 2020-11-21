@@ -6,10 +6,17 @@
 */
 
 body {
-    background-color: #eee2dc;
-    color: #123c69;
+  background-color: #eee2dc;
+  color: #123c69;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+ 
+nav, .page-footer {
+  background-color: #2c3531;
 }
 
-nav {
-    background-color: #2c3531;
+main {
+  flex: 1 0 auto;
 }
