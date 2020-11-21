@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>Review your book here</h2>
-
-    {% for book in books %}
-        {{ book.book_title }}<br>
+{% for book in books %}
+{{ book.book_title }}<br>
         {{ book.author }}<br>
         {{ book.genre }} <br>
     {% endfor %}
