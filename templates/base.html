@@ -30,23 +30,21 @@
           ><i class="fas fa-book-reader valign-wrapper"></i>Never Judge A
           Book</a
         >
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+        <a href="{{ url_for('login') }}" data-target="mobile-demo" class="sidenav-trigger"
           ><i class="material-icons">Home</i></a
         >
         <ul class="right hide-on-med-and-down">
-          <li><a href="mobile.html">Home</a></li>
-          <li><a href="sass.html">Book Review</a></li>
-          <li><a href="badges.html">Login</a></li>
-          <li><a href="collapsible.html">Register</a></li>
+          <li><a href="{{ url_for('review') }}">Book Review</a></li>
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+          <li><a href="#">Register</a></li>
         </ul>
       </div>
     </nav>
     <!-- mobile sidenav -->
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="mobile.html">Home</a></li>
-      <li><a href="sass.html">Book Review</a></li>
-      <li><a href="badges.html">Login</a></li>
-      <li><a href="collapsible.html">Register</a></li>
+      <li><a href="{{ url_for('review') }}">Book Review</a></li>
+      <li><a href="{{ url_for('login') }}">Login</a></li>
+      <li><a href="#">Register</a></li>
     </ul>
 
     <main>
