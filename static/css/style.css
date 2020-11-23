@@ -12,11 +12,12 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
- 
-nav, .page-footer {
-  background-color: #2c3531;
-}
 
 main {
   flex: 1 0 auto;
+}
+
+nav,
+.page-footer {
+  background-color: #2c3531;
 }
