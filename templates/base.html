@@ -26,7 +26,7 @@
     <!-- fixed top navbar-->
     <nav>
       <div class="nav-extended">
-        <a href="#!" class="brand-logo"
+        <a href="{{ url_for('login') }}" class="brand-logo hide-on-med-and-down"
           ><i class="fas fa-book-reader valign-wrapper"></i>Never Judge A
           Book</a
         >
@@ -34,7 +34,7 @@
           href="{{ url_for('login') }}"
           data-target="mobile-demo"
           class="sidenav-trigger"
-          ><i class="material-icons">Home</i></a
+          ><i class="material-icons">Never Judge A Book</i></a
         >
         <ul class="right hide-on-med-and-down">
           <li><a href="{{ url_for('review') }}">Book Review</a></li>
