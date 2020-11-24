@@ -1,8 +1,12 @@
 {% extends "base.html" %} {% block content %}
-<h3 class="center-align">Login Here!</h3>
+<h3 class="center-align">Register Here!</h3>
 <!-- form -->
 <div class="row">
-  <form class="col l6 m6 s12 offset-l3 offset-m3" method="POST"  action="{{ url_for('login') }}">
+  <form
+    class="col l6 m6 s12 offset-l3 offset-m3"
+    method="POST"
+    action="{{ url_for('register') }}"
+  >
     <!-- username -->
     <div class="row">
       <div class="input-field col s12">
@@ -34,10 +38,13 @@
         />
         <label for="password">Password</label>
       </div>
-      <!-- Login -->
+      <!-- register -->
       <div class="row">
-        <button type="submit" class="col s12 btn-large register-btn">
-          Login <i class="fas fa-sign-in-alt"></i>
+        <button
+          type="submit"
+          class="col s12 btn-large register-btn"
+        >
+          register <i class="fas fa-sign-in-alt"></i>
         </button>
       </div>
     </div>

@@ -18,6 +18,7 @@ main {
 }
 
 nav,
-.page-footer {
+.page-footer,
+.register-btn {
   background-color: #2c3531;
 }
