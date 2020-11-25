@@ -42,6 +42,7 @@
           <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('review') }}">Book Review</a></li>
             <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
           </ul>
@@ -52,6 +53,7 @@
         <li><h4>Never Judge A Book</h4></li>
         <li><a href="{{ url_for('review') }}">Book Review</a></li>
         <li><a href="{{ url_for('login') }}">Login</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
         <li><a href="{{ url_for('register') }}">Register</a></li>
         <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
       </ul>
