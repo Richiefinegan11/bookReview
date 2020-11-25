@@ -1,8 +1,14 @@
 {% extends "base.html" %} {% block content %}
+
 <h3 class="center-align">Login Here!</h3>
+
 <!-- form -->
 <div class="row">
-  <form class="col l6 m6 s12 offset-l3 offset-m3" method="POST"  action="{{ url_for('login') }}">
+  <form
+    class="col l6 m6 s12 offset-l3 offset-m3"
+    method="POST"
+    action="{{ url_for('login') }}"
+  >
     <!-- username -->
     <div class="row">
       <div class="input-field col s12">
