@@ -14,7 +14,7 @@ body {
 }
 
 h4 {
-    padding: 1em 0;
+  padding: 1em 0;
 }
 
 main {
@@ -28,6 +28,5 @@ nav,
 }
 
 .submit-btn:hover {
-    background-color: #123c69;
+  background-color: #123c69;
 }
-

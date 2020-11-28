@@ -75,7 +75,7 @@
       <ul class="sidenav" id="mobile-demo">
         <li><h4>Never Judge A Book</h4></li>
         {% if session.user %}
-        <li><a href="{{ url_for('review') }}">Book Review</a></li>
+        <li><a href="{{ url_for('review') }}">Book Reviews</a></li>
         <li>
           <a href="{{ url_for('profile', username=session['user']) }}"
             >My Profile</a
