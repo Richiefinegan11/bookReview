@@ -30,3 +30,16 @@ nav,
 .submit-btn:hover {
   background-color: #123c69;
 }
+
+.book-image {
+  height: 250px !important;
+}
+
+.card-content {
+  background-color: #eee2dc;
+  opacity: 0.3;
+  color: #2c3531;
+  height: 130px !important;
+}
+
+
