@@ -35,3 +35,8 @@ nav,
 .book-image {
   height: 270px !important;
 }
+
+.card {
+    width: 60%;
+    margin-left: 6em;
+}

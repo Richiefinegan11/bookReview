@@ -11,10 +11,6 @@
       type="text/css"
     />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
@@ -66,6 +62,7 @@
                 >My Profile</a
               >
             </li>
+            <li><a href="#">Write Review</a></li>
             <li><a href="{{ url_for('logout') }}">Logout</a></li>
             {% else %}
             <li><a href="{{ url_for('login') }}">Home</a></li>
@@ -85,6 +82,7 @@
             >My Profile</a
           >
         </li>
+        <li><a href="#">Write Review</a></li>
         <li><a href="{{ url_for('logout') }}">Logout</a></li>
         {% else %}
         <li><a href="{{ url_for('login') }}">Home</a></li>
