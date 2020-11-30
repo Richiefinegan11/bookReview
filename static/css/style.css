@@ -13,7 +13,8 @@ body {
   flex-direction: column;
 }
 
-h4 {
+h4,
+h3 {
   padding: 1em 0;
 }
 
@@ -32,14 +33,5 @@ nav,
 }
 
 .book-image {
-  height: 250px !important;
+  height: 270px !important;
 }
-
-.card-content {
-  background-color: #eee2dc;
-  opacity: 0.3;
-  color: #2c3531;
-  height: 130px !important;
-}
-
-

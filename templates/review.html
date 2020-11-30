@@ -9,30 +9,27 @@
 
 <div class="row">
   {% for book in books %}
-  <div class="col s6 m4 l2 offset-s3">
+  <div class="col s6 m4 l2 offset-s3 offset-l1 offset-m1">
     <div class="card">
       <div class="card-image">
         <img
-          class="book-image activator"
-          src="static/images/{{ book.image }}"
+          class="book-image activator responsive-img"
+          src="{{ book.image }}"
         />
       </div>
       <div class="card-content">
-        <span class="card-title activator"
-          >{{ book.title }}<i class="material-icons right">more_vert</i
-        ></span>
+        <span class="card-title activator">
+          {{ book.book_title }}<i class="material-icons right">more_vert</i>
+        </span>
         <p>{{ book.author }}</p>
         <p>{{ book.genre }}</p>
         <p><a href="#">{{ book.link }}</a></p>
       </div>
       <div class="card-reveal">
         <span class="card-title"
-          >{{ book.title }}<i class="material-icons right">close</i></span
+          >{{ book.book_title }}<i class="material-icons right">close</i></span
         >
-        <p>
-          Here is some more information about this product that is only revealed
-          once clicked on.
-        </p>
+        <p>{{ book.review }}</p>
       </div>
     </div>
   </div>
