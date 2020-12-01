@@ -2,16 +2,17 @@
 
 <h3 class="center-align">Write Your Review Here!</h3>
 
-<div class="row card-panel">
-	<form class="col s12" method="POST" action="{{ url_for('write_review') }}">
+<div class="row write-review">
+	<form class="col s12 m8 l8 offset-l2 offset-m2" method="POST" action="{{ url_for('write_review') }}">
 		<div class="row">
 			<div class="input-field col s12">
 				<input id="book_title" name="book_title" type="text" class="validate" required />
-				<label for="book_title">Book Title</label>
+				<label for="book_title"><i class="fas fa-book"></i> Book Title</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
+                
 				<input
           id="author"
           name="author"
@@ -19,31 +20,31 @@
           class="validate"
           required
         />
-				<label for="author">Author</label>
+				<label for="author"><i class="fas fa-signature"></i> Author</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<input id="image" name="image" type="text" class="validate" required />
-				<label for="image">Copy Image Address Here</label>
+				<label for="image"><i class="fas fa-images"></i> Copy Image Address Here</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<input id="genre" name="genre" type="text" class="validate" required />
-				<label for="genre">Genre</label>
+				<label for="genre"><i class="fas fa-filter"></i> Genre</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<textarea id="review" name="review" class="materialize-textarea"required></textarea>
-				<label for="review">Write your review here</label>
+				<label for="review"><i class="fas fa-pencil-alt"></i> Write your review here</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col s12 center-align">
 				<button type="submit" class="btn-large submit-btn">
-                Add Task <i class="fas fa-plus-square right">
+                Add Review <i class="fas fa-plus-square right">
                 </i>
             </button>
 			</div>
