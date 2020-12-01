@@ -26,10 +26,16 @@ nav,
 .page-footer,
 .submit-btn {
   background-color: #2c3531;
+  color: #eee2dc;
+}
+
+.submit-btn {  
+    border: double;
 }
 
 .submit-btn:hover {
-  background-color: #123c69;
+  background-color: #eee2dc;
+  color: #2c3531;
 }
 
 .book-image {
