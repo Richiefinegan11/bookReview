@@ -62,7 +62,7 @@
                 >My Profile</a
               >
             </li>
-            <li><a href="#">Write Review</a></li>
+            <li><a href="{{ url_for('write_review') }}">Write Review</a></li>
             <li><a href="{{ url_for('logout') }}">Logout</a></li>
             {% else %}
             <li><a href="{{ url_for('login') }}">Home</a></li>
@@ -82,7 +82,7 @@
             >My Profile</a
           >
         </li>
-        <li><a href="#">Write Review</a></li>
+        <li><a href="{{ url_for('write_review') }}">Write Review</a></li>
         <li><a href="{{ url_for('logout') }}">Logout</a></li>
         {% else %}
         <li><a href="{{ url_for('login') }}">Home</a></li>

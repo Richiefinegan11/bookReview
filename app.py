@@ -15,6 +15,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 @app.route("/")
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -89,6 +90,25 @@ def logout():
 def review():
     books = list(mongo.db.books.find())
     return render_template("review.html", books=books)
+
+
+@app.route("/write_review", methods=["GET", "POST"])
+def write_review():
+    if request.method == "POST":
+        review = {
+            "book_title": request.form.get("book_title"),
+            "author": request.form.get("author"),
+            "genre": request.form.get("genre"),
+            "image": request.form.get("image"),
+            "review": request.form.get("review"),
+            "created_by": session["user"]
+        }
+        mongo.db.books.insert_one(review)
+        flash("Review Successfully Added")
+        return redirect(url_for("write_review"))
+
+    
+    return render_template("write_review.html")
 
 
 if __name__ == "__main__":
