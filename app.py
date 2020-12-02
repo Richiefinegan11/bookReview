@@ -68,12 +68,28 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # grab the session user's username from db
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-
     if session["user"]:
-        return render_template("profile.html", username=username)
+        # grab user fromt the db
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+
+        # grab the list of books reviewed by user from db
+        books_reviewed = mongo.db.books.find(
+            {"created_by": session["user"]}
+        ).sort("book_title", 1)
+
+        all_books = mongo.db.books.find()
+
+        number = books_reviewed.count()
+
+        book_count = all_books.count()
+
+        return render_template(
+            "profile.html",
+            username=username,
+            number=number,
+            books_reviewed=books_reviewed,
+            book_count=book_count)
 
     return redirect(url_for("login"))
 
@@ -107,7 +123,6 @@ def write_review():
         flash("Review Successfully Added")
         return redirect(url_for("write_review"))
 
-    
     return render_template("write_review.html")
 
 
