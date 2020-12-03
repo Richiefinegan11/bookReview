@@ -3,6 +3,7 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -124,6 +125,25 @@ def write_review():
         return redirect(url_for("write_review"))
 
     return render_template("write_review.html")
+
+
+@app.route("/edit_review/<review_id>", methods=["GET", "POST"])
+def edit_review(review_id):
+    if request.method == "POST":
+        submit = {
+            "book_title": request.form.get("book_title"),
+            "author": request.form.get("author"),
+            "genre": request.form.get("genre"),
+            "image": request.form.get("image"),
+            "review": request.form.get("review"),
+            "created_by": session["user"]
+        }
+        mongo.db.books.update({"_id": ObjectId(review_id)}, submit)
+        flash("Your Review Has Been Updated")
+
+    review = mongo.db.books.find_one({"_id": ObjectId(review_id)})
+    books = mongo.db.books.find().sort("book_title", 1)
+    return render_template("edit_review.html", review=review, books=books)
 
 
 if __name__ == "__main__":

@@ -20,9 +20,7 @@
         />
       </div>
       <div class="card-content">
-        <span class="card-title activator">
-          {{ book.book_title }}
-        </span>
+        <span class="card-title activator"> {{ book.book_title }} </span>
         <p>{{ book.author }}</p>
         <p>{{ book.genre }}</p>
         <p><a href="#">{{ book.link }}</a></p>
@@ -33,6 +31,9 @@
         >
         <p>{{ book.review }}</p>
       </div>
+      {% if session.user|lower == book.created_by|lower %} 
+        <a href="{{ url_for('edit_review', review_id=book._id) }}" class="btn-small center-align">Edit</a>
+      {% endif %}
     </div>
   </div>
   {% endfor %}
