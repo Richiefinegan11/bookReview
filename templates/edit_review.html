@@ -1,13 +1,13 @@
 {% extends "base.html" %} {% block content %}
 
-<h3 class="center-align">Edit Your Review!</h3>
+<h3 class="center-align">Edit review Your Review Here!</h3>
 
 <div class="row write-review">
   <!-- write review form -->
   <form
     class="col s12 m8 l8 offset-l2 offset-m2"
     method="POST"
-    action="{{ url_for('edit_review', review_id=books._id) }}"
+    action="{{ url_for('edit_review', review_id=review._id) }}"
   >
     <!-- book title input -->
     <div class="row">
@@ -15,7 +15,7 @@
         <input
           id="book_title"
           name="book_title"
-          value="{{ review.book_title }}"
+          value="{{review.book_title}}"
           type="text"
           class="validate"
           required
@@ -29,7 +29,7 @@
         <input
           id="author"
           name="author"
-          value="{{ review.author }}"
+          value="{{review.author}}"
           type="text"
           class="validate"
           required
@@ -40,7 +40,7 @@
     <!-- image adress input -->
     <div class="row">
       <div class="input-field col s12">
-        <input id="image" name="image" value="{{ review.image }}" type="text" class="validate" required />
+        <input id="image" name="image" value="{{review.image}}" type="text" class="validate" required />
         <label for="image"
           ><i class="fas fa-images"></i> Copy Image Address Here</label
         >
@@ -49,7 +49,7 @@
     <!-- genre input -->
     <div class="row">
       <div class="input-field col s12">
-        <input id="genre" name="genre" value="{{ review.genre }}" type="text" class="validate" required />
+        <input id="genre" name="genre" value="{{review.genre}}" type="text" class="validate" required />
         <label for="genre"><i class="fas fa-filter"></i> Genre</label>
       </div>
     </div>
@@ -67,12 +67,12 @@
         >
       </div>
     </div>
-    <!-- edit review -->
+    <!-- add review -->
     <div class="row">
       <div class="col s12 center-align">
-        <!-- cancel button -->
-        <a href="{{ url_for('review') }}" class="btn-large submit-btn"> Cancel <i class="fas fa-window-close"></i></a>
-        <!-- edit button -->
+        <a href="{{ url_for('review') }}" class="btn-large submit-btn">
+          Cancel <i class="fas fa-window-close"></i
+        ></a>
         <button type="submit" class="btn-large submit-btn">
           Edit Review <i class="fas fa-plus-square right"></i>
         </button>

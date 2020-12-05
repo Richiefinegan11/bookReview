@@ -140,10 +140,11 @@ def edit_review(review_id):
         }
         mongo.db.books.update({"_id": ObjectId(review_id)}, submit)
         flash("Your Review Has Been Updated")
+        return redirect(url_for("review"))
 
     review = mongo.db.books.find_one({"_id": ObjectId(review_id)})
-    books = mongo.db.books.find().sort("book_title", 1)
-    return render_template("edit_review.html", review=review, books=books)
+    book = mongo.db.books.find().sort("book_title", 1)
+    return render_template("edit_review.html", review=review, book=book)
 
 
 if __name__ == "__main__":

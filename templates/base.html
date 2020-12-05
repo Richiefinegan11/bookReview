@@ -27,6 +27,7 @@
     <header>
       <nav>
         <div class="nav-extended">
+        <!-- nav links for user in session -->
           {% if session.user %}
           <a
             href="{{ url_for('review') }}"
@@ -41,6 +42,7 @@
             ><i class="material-icons">Never Judge A Book</i></a
           >
           {% else %}
+        <!-- nav links for user out of session -->
           <a
             href="{{ url_for('login') }}"
             class="brand-logo hide-on-med-and-down"
@@ -55,6 +57,7 @@
           >
           {% endif %}
           <ul class="right hide-on-med-and-down">
+
             {% if session.user %}
             <li><a href="{{ url_for('review') }}">Book Review</a></li>
             <li>
