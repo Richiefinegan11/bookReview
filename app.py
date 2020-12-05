@@ -143,8 +143,7 @@ def edit_review(review_id):
         return redirect(url_for("review"))
 
     review = mongo.db.books.find_one({"_id": ObjectId(review_id)})
-    book = mongo.db.books.find().sort("book_title", 1)
-    return render_template("edit_review.html", review=review, book=book)
+    return render_template("edit_review.html", review=review)
 
 
 if __name__ == "__main__":

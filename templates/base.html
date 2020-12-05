@@ -27,7 +27,7 @@
     <header>
       <nav>
         <div class="nav-extended">
-        <!-- nav links for user in session -->
+        <!-- home for user in session -->
           {% if session.user %}
           <a
             href="{{ url_for('review') }}"
@@ -42,7 +42,7 @@
             ><i class="material-icons">Never Judge A Book</i></a
           >
           {% else %}
-        <!-- nav links for user out of session -->
+        <!-- home for user out of session -->
           <a
             href="{{ url_for('login') }}"
             class="brand-logo hide-on-med-and-down"
@@ -57,7 +57,7 @@
           >
           {% endif %}
           <ul class="right hide-on-med-and-down">
-
+        <!-- nav links for user in session -->
             {% if session.user %}
             <li><a href="{{ url_for('review') }}">Book Review</a></li>
             <li>
@@ -68,6 +68,7 @@
             <li><a href="{{ url_for('write_review') }}">Write Review</a></li>
             <li><a href="{{ url_for('logout') }}">Logout</a></li>
             {% else %}
+        <!-- nav links for user in session -->
             <li><a href="{{ url_for('login') }}">Home</a></li>
             <li><a href="{{ url_for('login') }}">Login</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>

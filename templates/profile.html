@@ -3,6 +3,7 @@
 <div class="row">
   <div class="col s12 m8 offset-m2">
     <div>
+    <!-- shows the in user in session their book reviews -->
       <h3 class="center-align">
         {{ username }}, you have reviewed {{ number }}/ {{ book_count }} Books
       </h3>
@@ -10,6 +11,7 @@
   </div>
 </div>
 <div class="row">
+<!-- iterates through the reviewed books and shows the user their book reviews -->
   {% for book in books_reviewed %}
   <div class="col s12 m6 l3">
     <div class="card book-card">
