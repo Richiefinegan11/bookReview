@@ -39,11 +39,11 @@ nav,
   color: #2c3531;
 }
 
-.book-image {
+.book-image, .card-content {
   height: 270px !important;
 }
 
 .book-card {
-    width: 60%;
-    margin-left: 6em;
+    width: 200px;
+    margin-left: 3em;
 }
