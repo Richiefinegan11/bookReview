@@ -71,7 +71,7 @@
     <div class="row">
       <div class="col s12 center-align">
     <!-- cancel button -->
-        <a href="{{ url_for('review') }}" class="btn-large submit-btn">
+        <a href="{{ url_for('profile', username=session['user']) }}" class="btn-large submit-btn">
           Cancel <i class="fas fa-window-close"></i
         ></a>
     <!-- edit button -->

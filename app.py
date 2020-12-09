@@ -147,7 +147,7 @@ def edit_review(review_id):
         }
         mongo.db.books.update({"_id": ObjectId(review_id)}, submit)
         flash("Your Review Has Been Updated")
-        return redirect(url_for("review"))
+        return redirect(url_for("profile", username=session["user"]))
 
     review = mongo.db.books.find_one({"_id": ObjectId(review_id)})
     return render_template("edit_review.html", review=review)
@@ -157,7 +157,7 @@ def edit_review(review_id):
 def delete_review(review_id):
     mongo.db.books.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
-    return redirect(url_for("review"))
+    return redirect(url_for("profile", username=session["user"]))
 
 
 if __name__ == "__main__":

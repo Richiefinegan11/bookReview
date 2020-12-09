@@ -88,7 +88,7 @@ nav,
 /* media query for tablet, landscape iPad, lo-res laptops ands desktops  */
 @media screen and (min-width:801px) {
     .book-image {
-        height: 250px !important;
+        height: 300px !important;
     }
     .card-content {
         height: 250px !important;
