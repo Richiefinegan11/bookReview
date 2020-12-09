@@ -109,11 +109,11 @@ def review():
     return render_template("review.html", books=books)
 
 
-# @app.route("/search")
-# def search():
-#     query = request.form.get("query")
-#     book = list(mongo.db.books.find({"$text": {"$search": query}}))
-#     return render_template("review.html", book=book)
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    books = list(mongo.db.books.find({"$text": {"$search": query}}))
+    return render_template("review.html", books=books)
 
 
 @app.route("/write_review", methods=["GET", "POST"])
@@ -151,6 +151,7 @@ def edit_review(review_id):
 
     review = mongo.db.books.find_one({"_id": ObjectId(review_id)})
     return render_template("edit_review.html", review=review)
+
 
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
