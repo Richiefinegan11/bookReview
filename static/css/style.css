@@ -11,6 +11,10 @@ h3 {
   padding: 1em 0;
 }
 
+.back-to-top {
+    color: #2c3531 !important;
+}
+
 main {
   flex: 1 0 auto;
 }
