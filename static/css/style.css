@@ -70,7 +70,7 @@ nav,
 
 @media screen and (min-width:600px) {
     .book-image {
-        height: 215px !important;
+        height: 275px !important;
     }
     .card-content {
         height: 235px !important;
@@ -79,15 +79,20 @@ nav,
         width: 75%;
         margin-left: 25px;
     }
+    #profile-card {
+        width: 80% !important;
+        margin-left: 35px;
+        
+    }
 }
 
 /* media query for tablet, landscape iPad, lo-res laptops ands desktops  */
 @media screen and (min-width:801px) {
     .book-image {
-        height: 245px !important;
+        height: 250px !important;
     }
     .card-content {
-        height: 200px !important;
+        height: 250px !important;
     }
     .card { 
         width: 85%;
@@ -98,14 +103,19 @@ nav,
 /* media query for big landscape tablets, laptops, and desktop */
 @media screen and (min-width: 1025px) {
     .book-image {
-        height: 250px !important;
+        height: 280px !important;
     }
     .card-content {
-        height: 200px !important;
+        height: 240px !important;
     }
     .card { 
-        width: 70%;
+        width: 85%;
         margin-left: 40px;
+    }
+    #profile-card {
+        width: 80% !important;
+        margin-left: 20px;
+        
     }
 }
 
