@@ -155,7 +155,7 @@ def edit_review(review_id):
 
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
-    mongo.db.books.remove({"_id": ObjectId(review_id)})
+    mongo.db.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
     return redirect(url_for("profile", username=session["user"]))
 
