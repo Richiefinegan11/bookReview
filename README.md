@@ -1,7 +1,7 @@
 # Never Judge a Book
 ## Welcome! Please click the below image, I hope you enjoy it.
 
-[![Book Image](static/images/flickedBook.jpg](https://never-judge-book.herokuapp.com/)
+[![Book Image](static/images/flickedBook.jpg)](https://never-judge-book.herokuapp.com/)
 
 ## Table of content
 * [Overview](#Overview)
