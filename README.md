@@ -46,22 +46,22 @@ When the user writes the review, a successful message will flash before them to 
 
 ## Wireframes 
 * Home
-  * [Desktop](/static/images/home_desktop)
-  * [Tablet](/static/images/home_tablet)
-  * [Mobile](/static/images/home_mobile)
+  * [Desktop](static/images/home_desktop)
+  * [Tablet](static/images/home_tablet)
+  * [Mobile](static/images/home_mobile)
 * Write Review
-  * [Desktop](/static/images/writeReview_desktop)
-  * [Tablet](/static/images/writeReview_tablet)
-  * [Mobile](/static/images/writeReview_mobile)
+  * [Desktop](static/images/writeReview_desktop)
+  * [Tablet](static/images/writeReview_tablet)
+  * [Mobile](static/images/writeReview_mobile)
 * Register
-  * [Desktop](/static/images/register_desktop)
-  * [Tablet](/static/images/register_tablet)
-  * [Mobile](/static/images/register_mobile)
+  * [Desktop](static/images/register_desktop)
+  * [Tablet](static/images/register_tablet)
+  * [Mobile](static/images/register_mobile)
 * Your Review
-  * [Desktop](/static/images/yourReview_desktop)
-  * [Tablet](/static/images/yourReview_tablet)
-  * [Mobile](/static/images/yourReview_mobile)
+  * [Desktop](static/images/yourReview_desktop)
+  * [Tablet](static/images/yourReview_tablet)
+  * [Mobile](static/images/yourReview_mobile)
 * Book Page
-  * [Desktop](/static/images/bookPage_desktop)
-  * [Tablet](/static/images/bookPage_tablet)
-  * [Mobile](/static/images/bookPage_mobile)
+  * [Desktop](static/images/bookPage_desktop)
+  * [Tablet](static/images/bookPage_tablet)
+  * [Mobile](static/images/bookPage_mobile)
