@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% block content %}
 
+<!-- shows the in user in session their book reviews -->
 <div class="row">
   <div class="col s12 m8 offset-m2">
     <div>
-        <!-- shows the in user in session their book reviews -->
       <h3 class="center-align">
         {{ username }}, you have reviewed {{ number }}/ {{ book_count }} Books
       </h3>
@@ -13,37 +13,39 @@
 <div class="row">
     <!-- iterates through the reviewed books and shows the user their book reviews -->
   {% for book in books_reviewed %}
-  <div class="col s12 m6 l3">
-    <div class="card" id="profile-card">
-      <div class="card-image">
-        <img
-          class="book-image activator responsive-img"
-          src="{{ book.image }}"
-        />
-      </div>
-      <div class="card-content">
-        <span class="card-title activator"> {{ book.book_title }} </span>
-        <p>{{ book.author }}</p>
-        <p>{{ book.genre }}</p>
-        <p><a href="#">{{ book.link }}</a></p>
-      </div>
-      <div class="card-reveal">
-        <span class="card-title"
-          >{{ book.book_title }}<i class="material-icons right">close</i></span
-        >
-        <p>{{ book.review }}</p>
-      </div>
-      <div class="user-card center-align">
-        {% if session.user|lower == book.created_by|lower %} 
-        <a href="{{ url_for('edit_review', review_id=book._id) }}" class="btn-small user-btn">Edit</a>
-        <a href="{{ url_for('delete_review', review_id=book._id) }}" class="btn-small user-btn center-align">Delete</a>
-      {% endif %}
-      </div>
+    <div class="col s12 m6 l3">
+        <div class="card" id="profile-card">
+            <div class="card-image">
+                <img
+                class="book-image activator responsive-img"
+                src="{{ book.image }}"
+                />
+            </div>
+            <div class="card-content">
+                <span class="card-title activator"> {{ book.book_title }} </span>
+                <p>{{ book.author }}</p>
+                <p>{{ book.genre }}</p>
+                <p><a href="#">{{ book.link }}</a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title"
+                >{{ book.book_title }}<i class="material-icons right">close</i></span
+                >
+                <p>{{ book.review }}</p>
+            </div>
+            <div class="user-card center-align">
+                {% if session.user|lower == book.created_by|lower %} 
+                    <a href="{{ url_for('edit_review', review_id=book._id) }}" class="btn-small user-btn">Edit</a>
+                    <a href="{{ url_for('delete_review', review_id=book._id) }}" class="btn-small user-btn center-align">Delete</a>
+                {% endif %}
+            </div>
+        </div>
     </div>
-  </div>
   {% endfor %}
 </div>
+{% if number >= 5 %}
 <div class="center-align">
     <a class="back-to-top" href="{{ url_for('profile', username=session['user']) }}"><i class="fas fa-arrow-up"></i> Back To Top</a>
 </div>
+{% endif %}
 {% endblock %}

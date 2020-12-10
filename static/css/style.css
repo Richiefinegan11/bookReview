@@ -46,6 +46,10 @@ nav,
   color: #2c3531;
 }
 
+footer li {
+    margin: 1em 0;
+}
+
 @media screen and (min-width:320px) {
     .book-image {
         height: 350px !important;

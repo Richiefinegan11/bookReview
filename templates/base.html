@@ -32,21 +32,21 @@
           <a
             href="{{ url_for('review') }}"
             class="brand-logo hide-on-med-and-down"
-            ><i class="fas fa-book-reader valign-wrapper"></i>Never Judge A
-            Book</a
+            ><i class="fas fa-book-reader right valign-wrapper"></i> Never Judge A
+            Book </a
           >
           <a
             href="{{ url_for('review') }}"
             data-target="mobile-demo"
             class="sidenav-trigger"
-            ><i class="material-icons">Never Judge A Book</i></a
+            ><i class="fas fa-book-open"></i></a
           >
           {% else %}
         <!-- home for user out of session -->
           <a
             href="{{ url_for('login') }}"
             class="brand-logo hide-on-med-and-down"
-            ><i class="fas fa-book-reader valign-wrapper"></i>Never Judge A
+            ><i class="fas fa-book-reader right valign-wrapper"></i>Never Judge A
             Book</a
           >
           <a
@@ -109,30 +109,33 @@
     <main>
       <div class="row">{% block content %} {% endblock %}</div>
     </main>
-
     <!-- footer -->
     <footer class="page-footer">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
+            <h5 class="white-text"><i class="fas fa-book-reader center"></i> Never Judge A Book</h5>
             <p class="grey-text text-lighten-4">
-              You can use rows and columns here to organize your footer content.
+              Never judge a book by its cover, join and let us do it for you!
             </p>
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
             <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="{{ url_for('write_review') }}"><i class="fas fa-pencil-alt center"></i>  Write your review here</a></li>
+              <li><a class="grey-text text-lighten-3" href="{{ url_for('review') }}"><i class="fas fa-book center"></i>  Check out all the book reviews here</a></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="footer-copyright">
         <div class="container">
-          © 2014 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          © 2020 Copyright Text
+          {% if session.user %}
+            <a class="grey-text text-lighten-4 right" href="{{ url_for('logout') }}">Log Out</a>
+          {% else %}
+            <a class="grey-text text-lighten-4 right" href="{{ url_for('login') }}">Log In</a>
+          {% endif %}
         </div>
       </div>
     </footer>
