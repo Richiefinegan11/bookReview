@@ -46,22 +46,119 @@ When the user writes the review, a successful message will flash before them to 
 
 ## Wireframes 
 * Home
-  * [Desktop](static/images/home_desktop)
-  * [Tablet](static/images/home_tablet)
-  * [Mobile](static/images/home_mobile)
+  * [Desktop](static/images/home_desktop.png)
+  * [Tablet](static/images/home_tablet.png)
+  * [Mobile](static/images/home_mobile.png)
 * Write Review
-  * [Desktop](static/images/writeReview_desktop)
-  * [Tablet](static/images/writeReview_tablet)
-  * [Mobile](static/images/writeReview_mobile)
+  * [Desktop](static/images/writeReview_desktop.png)
+  * [Tablet](static/images/writeReview_tablet.png)
+  * [Mobile](static/images/writeReview_mobile.png)
 * Register
-  * [Desktop](static/images/register_desktop)
-  * [Tablet](static/images/register_tablet)
-  * [Mobile](static/images/register_mobile)
+  * [Desktop](static/images/register_desktop.png)
+  * [Tablet](static/images/register_tablet.png)
+  * [Mobile](static/images/register_mobile.png)
 * Your Review
-  * [Desktop](static/images/yourReview_desktop)
-  * [Tablet](static/images/yourReview_tablet)
-  * [Mobile](static/images/yourReview_mobile)
+  * [Desktop](static/images/yourReview_desktop.png)
+  * [Tablet](static/images/yourReview_tablet.png)
+  * [Mobile](static/images/yourReview_mobile.png)
 * Book Page
-  * [Desktop](static/images/bookPage_desktop)
-  * [Tablet](static/images/bookPage_tablet)
-  * [Mobile](static/images/bookPage_mobile)
+  * [Desktop](static/images/bookPage_desktop.png)
+  * [Tablet](static/images/bookPage_tablet.png)
+  * [Mobile](static/images/bookPage_mobile.png)
+
+## Features
+### Existing Features
+Each page has a responsive navigation bar with the name of the site (top left) as a clickable home button. When viewed on a mobile site the navbar presents 
+
+### Home    
+Under the navbar, the heading appears in the form of a welcoming message to the user. Under the heading, the introduction begins and is designed to resemble the Star Wars opening crawl, with an attempt at humor. The introduction is short and sweet, it lets the user know there is a quiz available on the page and also has a clickable prompt to let the user know about the club page. 
+
+At the bottom of the introduction, there is a button labeled 'Start Quiz', when clicked, the introduction disappears and the quiz questions appear one by one with four clickable multiple-choice options with a yellow background. Once an option is picked, the 3 incorrect options turn red and the correct option turns green, then a clickable next button appears for the user to go to the next question. This repeats through 10 questions and then the quiz is complete. At the end of the quiz, the user will receive a score accompanied by a GIF reaction to the score. Under this, there is an option to re-attempt the quiz or to quit back to the main page using buttons and hyperlinks.
+
+### Club Page
+Under the navbar on the club page, there is a map showing the locations, where the fan club meets all over the country. Under the map, there is a button with the name of each city where the meet-ups take place. When clicked, these buttons will zoom in on the city and show cycling routes all around that city. Directly under this, there is a form for the user to fill out if they are interested in joining the club. Once filled out correctly, the user will then receive an email to the address they have given, indicating if they have been accepted or not.
+
+### Features left to implement
+* Store - Once there is a sufficient amount of fans, I will then implement a merchandise page. The fans can then purchase merchandise from the show upon visiting the website.
+* Blog - Once the site gets some more interest and traffic, I will add a blog page to the site so fans can then interact with each other online too.
+
+## Technologies Used
+* [Visual Studio Code](https://code.visualstudio.com/)
+   * The developer used visual studio code as their IDE while building the website
+* [BootstrapCDN](https://getbootstrap.com/)
+  * The project used Bootstrap4 to simplify the layout of the website and make it easily responsive
+* [Google Fonts](https://fonts.google.com/)
+  * This project used google fonts to style the website fonts
+* [Popper.js](https://popper.js.org/)
+  * This project used Popper.js reference Javascript needed for the responsive navbar
+* [jQuery](https://jquery.com/)
+  * The project uses jQuery to reference Javascript needed for the responsive navbar
+* [EmailJS](https://www.emailjs.com/)
+  * The project uses emailJS for the user to join the club and the owner to receive the email
+* [Google Maps API](https://developers.google.com/maps/documentation)
+  * The project uses the google maps API to show where the meet-up spots are
+
+## Testing
+Testing can be accessed [here](TESTING.md)
+
+## Deployment
+This project was developed using Visual Studio Code, committed to git, and pushed to Github.
+
+To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
+
+1. Log into GitHub.
+From the list of repositories on the left-hand side of the screen, select [Richiefinegan11/stoic_in_action](https://github.com/Richiefinegan11/rickAndMortyFans).
+2. From the menu items near the top of the page, select Settings.
+3. Scroll down the page to the GitHub Pages section.
+4. Under Source, in the Github Pages section, click the drop-down menu labeled None and select Master Branch.
+5. On selecting Master Branch the page is automatically refreshed, the website is now deployed.
+6. Scroll back down to the GitHub Pages section where the link to the deployed website will be, at the top of the section.
+
+### How to run the code locally
+
+To clone this project from GitHub:
+
+1. Click on the repository [Richiefinegan11/stoic_in_action](https://github.com/Richiefinegan11/rickAndMortyFans).
+2. To the right of the page, click the "Clone or download button.
+3. When the Clone with HTTPs section shows, copy the URL of the repository.
+4. In your local IDE open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type git clone - then paste the URL copied for as advised in step 3.
+
+## Credits 
+
+### Code 
+
+* CSS
+  * Stack Overflow was very helpful in assisting me with questions I needed to be answered to create the style sheet.
+
+* Main page HTML -
+  * Some of the HTML5 was copied from BootstrapCDN and modified for layout and responsiveness.
+
+* Main page JS -
+  * The javascript used for the quiz was influenced by:
+    * [Sitepoint](https://www.sitepoint.com/simple-javascript-quiz/)
+    * [VerkkoNet](https://www.youtube.com/channel/UCErON4Z0YyiVHKNtx4BvLfg)
+    * [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)
+* Club Page JS -
+  * The Google maps was achieved by using [Google Maps API](https://developers.google.com/maps/documentation)
+  * The form on this page was achieved by using [EmailJS](https://www.emailjs.com/) and implemented with the help of the Code Institue course
+  
+
+### Content 
+  * The content for this site was influenced by the TV show "Rick and Morty"
+  * Some Questions for the quiz were obtained from [thequiz.com](https://www.thequiz.com/can-you-pass-the-hardest-rick-and-morty-quiz-on-the-internet/)
+
+### Media 
+  * The main image used in the background was taken from [HD Wallpaper](https://www.hdwallpaper.nu/rick-and-morty-wallpapers/)
+
+### Acknowledgements
+
+Jonathan Munz (Code Institute Mentor) - For his advice, helpful feedback, and reassurance towards the end of this project, as always.
+
+The Code Institute Slack Community - which was so helpful, especially for this project. Viewing other student's projects helped me a lot with my own.
+
+My friends and family, especially Aaron Mcdonnell & Ian P Brady for their very helpful feedback for this site.
+
+### Disclaimer
+The content of this Website is for educational purposes only
