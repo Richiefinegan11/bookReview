@@ -11,6 +11,10 @@ h3 {
   padding: 1em 0;
 }
 
+p {
+    word-wrap: break-word;
+}
+
 .back-to-top {
     color: #2c3531 !important;
 }
@@ -84,8 +88,8 @@ footer li {
         height: 235px !important;
     }
     .card { 
-        width: 75%;
-        margin-left: 25px;
+        width: 100%;
+        margin-left: 2px;
     }
     #profile-card {
         width: 80% !important;
@@ -128,14 +132,14 @@ footer li {
 /* media query for hi-res laptops and desktops */
 @media screen and (min-width: 1281px){
     .book-image {
-        height: 350px !important;
+        height: 360px !important;
     }
     .card-content {
-        height: 200px !important;
+        height: 250px !important;
     }
     .card { 
-        width: 70%;
-        margin-left: 70px;
+        width: 75%;
+        margin-left: 55px;
     }
     .login-img {
         height: 200px;

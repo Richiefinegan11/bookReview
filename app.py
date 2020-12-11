@@ -160,6 +160,25 @@ def delete_review(review_id):
     return redirect(url_for("profile", username=session["user"]))
 
 
+@app.route("/delete_account", methods=["GET", "POSTS"])
+def delete_account():
+    if session.get('user'):
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+
+        return render_template("delete_account.html", username=username)
+
+    return redirect(url_for("login"))
+
+
+@app.route("/delete_account_confirmed", methods=["GET", "POST"])
+def delete_account_confirmed():
+    mongo.db.users.remove({"username": session["user"]})
+    flash("User Deleted")
+    session.pop("user")
+    return redirect(url_for("register"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

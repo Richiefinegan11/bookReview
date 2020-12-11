@@ -68,15 +68,26 @@ When the user writes the review, a successful message will flash before them to 
 
 ## Features
 ### Existing Features
-Each page has a responsive navigation bar with the name of the site (top left) as a clickable home button. When viewed on a mobile site the navbar presents 
+Each page has a responsive navigation bar with the name of the site (top left) as a clickable button. This button takes the user to the login page, when the user is not logged in, and to the book reviews page, when the user is logged in. 
+On larger devices, when the user is not in session, the nav bar will show clickable links "Home", "Login" and "Register" on the top right. When the user is in session on larger devices, the navbar will show clickable links "Book Review", "My Profile", "Write Review" and "Log Out".
+On smaller and mobile devices, when the user is not in session, a clickable book icon will show on the nav bar, which, when clicked, displays a side nav to the right of screen, with clickable links "Home", "Login" and "Register". When the user is in session, on smaller and mobile devices, the same thing happens, except the side nav will show clickable links "Book Review", "My Profile", "Write Review" and "Log Out".
 
-### Home    
-Under the navbar, the heading appears in the form of a welcoming message to the user. Under the heading, the introduction begins and is designed to resemble the Star Wars opening crawl, with an attempt at humor. The introduction is short and sweet, it lets the user know there is a quiz available on the page and also has a clickable prompt to let the user know about the club page. 
+Each page also has a responsive footer, with the sites name and logo and also has links for the write review page and the book review page, when the user is in session but will display login and register links, when the user is not in session. At the bottom right of the footer, there is also a log out/login button, depending on whether the user is in session or not.
 
-At the bottom of the introduction, there is a button labeled 'Start Quiz', when clicked, the introduction disappears and the quiz questions appear one by one with four clickable multiple-choice options with a yellow background. Once an option is picked, the 3 incorrect options turn red and the correct option turns green, then a clickable next button appears for the user to go to the next question. This repeats through 10 questions and then the quiz is complete. At the end of the quiz, the user will receive a score accompanied by a GIF reaction to the score. Under this, there is an option to re-attempt the quiz or to quit back to the main page using buttons and hyperlinks.
+### Login/Register 
 
-### Club Page
-Under the navbar on the club page, there is a map showing the locations, where the fan club meets all over the country. Under the map, there is a button with the name of each city where the meet-ups take place. When clicked, these buttons will zoom in on the city and show cycling routes all around that city. Directly under this, there is a form for the user to fill out if they are interested in joining the club. Once filled out correctly, the user will then receive an email to the address they have given, indicating if they have been accepted or not.
+#### Regiser
+On the Register page, there is a form at the top of the page, where the user is prompted to register their username and password. Once filled in and the user clicks the submit/register button, a "POST" method will check if the username is already registered. If the username is not registered, a profile will be created for the user and they will be brought to their profile. However if the username is already in the database, a flash message will show Username already exists, at the top of the page. Under the form button, there is a link to take users that have already registered to the login page.
+#### Login
+The Login page is very similar to the Register page, there is a form at the top of the page, where the user is prompted to type in their username and password. The form will on except characters from 5 to 15 in lenght and numbers and letters, the user must match this or a prompt will instruct them to match the correct format.
+The user can then log in with their details, when the user clicks the submit/login button, a "POST" method checks the database to see if the username is registered. If the username is registered, the user will be logged in. However, if the username is not found in the database, a message will flash "Incorrect Username and/or Password at the top of the page. The message will not indicate specifically, which one is incorrect. Under the form button, there is a link to take users that have not already registered to the register page.
+#### Login/Register page content
+Under these forms, there is an introdcutory question. This is followed by nice images of books and text explaining the aim of the site to users. On large devices, the text and image position change from left to right down the page, to give a more aesthetically pleasing fell to the page. On smaller and mobile devices, they adapt to what looks more pleasing on the mobile device. 
+
+### Book Review 
+On the top of the Book Review page there is a responsive search bar, this allows the user to search for a book review, based on the book title, author or genre. Under the search bar, there is a search button for the user to commence the searc or a reset button, which will reset the page. Next on the page is the the book reviews from all the users. This is laid out on cards with an image and text as card content. The text has a clickable card reveal "See Review" link, which reveals the books review. Under this is the Title of the book, followed by the author and the genre. When a user uploads a review, the books will neatly and responsively fall in to line. The last piece of text on the card is the link that will take the user to an external site to buy the book, the site will then gain commission for directing the user through their site.
+At the bottom of the page, under the book review, there is a link marked "back to top", which brings the user back to the top of the page.
+
 
 ### Features left to implement
 * Store - Once there is a sufficient amount of fans, I will then implement a merchandise page. The fans can then purchase merchandise from the show upon visiting the website.
