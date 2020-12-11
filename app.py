@@ -106,7 +106,9 @@ def logout():
 @app.route("/review")
 def review():
     books = list(mongo.db.books.find())
-    return render_template("review.html", books=books)
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("review.html", books=books, username=username)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -155,7 +157,7 @@ def edit_review(review_id):
 
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
-    mongo.db.remove({"_id": ObjectId(review_id)})
+    mongo.db.books.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
     return redirect(url_for("profile", username=session["user"]))
 

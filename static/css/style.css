@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 body {
   background-color: #eee2dc;
   color: #2c3531;
   display: flex;
+  font-family: 'Rubik', sans-serif;
   min-height: 100vh;
   flex-direction: column;
 }
@@ -85,7 +88,7 @@ footer li {
         height: 275px !important;
     }
     .card-content {
-        height: 235px !important;
+        height: 255px !important;
     }
     .card { 
         width: 100%;

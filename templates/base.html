@@ -102,7 +102,7 @@
                                     class="fas fa-pencil-alt center"></i> Write your review here</a></li>
                         <li><a class="grey-text text-lighten-3" href="{{ url_for('review') }}"><i
                                     class="fas fa-book center"></i> Check out all the book reviews here</a></li>
-                        <li><a class="grey-text text-lighten-3" href="{{ url_for('delete_account') }}">Delete Account</a></li>
+                        <li><a class="grey-text text-lighten-3" href="{{ url_for('delete_account') }}"><i class="far fa-trash-alt"></i> Delete Account</a></li>
                         {% else %}
                         <li><a class="grey-text text-lighten-3" href="{{ url_for('register') }}"><i
                                     class="fas fa-pencil-alt center"></i> Register</a></li>
@@ -119,7 +119,7 @@
                 {% if session.user %}
                 <a class="grey-text text-lighten-4 right" href="{{ url_for('logout') }}">Log Out</a>
                 {% else %}
-                <a class="grey-text text-lighten-4 right" href="{{ url_for('login') }}">Log In</a>
+                <a class="grey-text text-lighten-4 right" href="{{ url_for('register') }}">Register</a>
                 {% endif %}
             </div>
         </div>
