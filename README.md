@@ -208,7 +208,7 @@ When deplying locally, you will need to follow the below steps:
 
 Jonathan Munz (Code Institute Mentor) - For his advice, helpful feedback, and reassurance towards the end of this project, as always.
 
-The Code Institute Slack Community - which was so helpful, especially for this project. Viewing other student's projects helped me a lot with my own.
+The Code Institute Slack Community - which was so helpful, especially for this project. Viewing other student's projects helped me a lot with my own. I would especially like to thank [Lewis](https://code-institute-room.slack.com/team/USRLF3J0M) and [Lige](https://code-institute-room.slack.com/team/UT8PXGLTZ) for their feed back in the peer code review channel
 
 My friends and family, especially Catherine and Jordan for their very helpful feedback for this site.
 
