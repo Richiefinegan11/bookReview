@@ -106,9 +106,7 @@ def logout():
 @app.route("/review")
 def review():
     books = list(mongo.db.books.find())
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    return render_template("review.html", books=books, username=username)
+    return render_template("review.html", books=books)
 
 
 @app.route("/search", methods=["GET", "POST"])
