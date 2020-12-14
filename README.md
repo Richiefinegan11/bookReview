@@ -153,7 +153,7 @@ To deploy this project online (online IDE - like gitpod) follow the following st
 3. Used the CLI to install all of the frameworks and collect them inside the requirements.txt file
     * You can do this by typing "pip3 install -r requirements.txt" in yout command line interface
 4. Create a Procfile for Heroku stating that it should run app.py as a web app and use Python as the language
-5.  Create your MongoDB database and collections (see interaction design above for how to set up the collections), populated it with data and connected to it by following the steps in MongoDB
+5.  Create your MongoDB database and collections, populated it with data and connected to it by following the steps in MongoDB
 6. Sign up to Heroku and go to https://dashboard.heroku.com/apps and created your new app
 7. Connect to your GitHub repository via Heroku
 8. Go to settings and in Config Vars, click Reveal Config Vars :
@@ -183,9 +183,6 @@ When deplying locally, you will need to follow the below steps:
 * Navigate to the correct file location after unpacking the files
     * cd <path to folder>
 * Create a .env file with your credentials. (The same as deploying the project online)
-*  Create a .flaskenv file and add the following entries:
-    * FLASK_APP=app.py
-    * FLASK_ENV=development
 * Install all requirements from the requirements.txt file using this command:
     * sudo -H pip3 -r requirements.txt
 * Sign up for a free account on MongoDB and create a new Database called food The Collections in that database should be as stated in the interaction design
@@ -195,30 +192,17 @@ When deplying locally, you will need to follow the below steps:
 
 ## Credits 
 
-### Code 
-
-* CSS
-  * 
-
-* Main page HTML -
-  * 
-
-* Main page JS -
-  * The javascript used for the quiz was influenced by:
-    * [Sitepoint](https://www.sitepoint.com/simple-javascript-quiz/)
-    * [VerkkoNet](https://www.youtube.com/channel/UCErON4Z0YyiVHKNtx4BvLfg)
-    * [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)
-* Club Page JS -
-  * The Google maps was achieved by using [Google Maps API](https://developers.google.com/maps/documentation)
-  * The form on this page was achieved by using [EmailJS](https://www.emailjs.com/) and implemented with the help of the Code Institue course
-  
-
 ### Content 
-  * The content for this site was influenced by the TV show "Rick and Morty"
-  * Some Questions for the quiz were obtained from [thequiz.com](https://www.thequiz.com/can-you-pass-the-hardest-rick-and-morty-quiz-on-the-internet/)
+  * The content for this site was taken from the project idea section, suggested by code institue.
+  * All text used for this is my own
 
 ### Media 
-  * The main image used in the background was taken from [HD Wallpaper](https://www.hdwallpaper.nu/rick-and-morty-wallpapers/)
+  * The images for the login/register page was obtained from the below:
+    * [Visual Hunt](https://visualhunt.com/photos/book/)
+    * [Pixabay](https://pixabay.com/images/search/love%20book/)
+    * [Freepic](https://www.freepik.com/premium-photo/open-book-with-glasses-wooden-table-against-background-set-books-vintage-toning_5237563.htm)
+ * Images for the Book Review page are from [Book Depository](https://www.bookdepository.com/)
+ * All other images are uploaded by the users
 
 ### Acknowledgements
 
@@ -226,7 +210,7 @@ Jonathan Munz (Code Institute Mentor) - For his advice, helpful feedback, and re
 
 The Code Institute Slack Community - which was so helpful, especially for this project. Viewing other student's projects helped me a lot with my own.
 
-My friends and family, especially Aaron Mcdonnell & Ian P Brady for their very helpful feedback for this site.
+My friends and family, especially Catherine and Jordan for their very helpful feedback for this site.
 
 ### Disclaimer
 The content of this Website is for educational purposes only
