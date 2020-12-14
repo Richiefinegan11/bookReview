@@ -112,6 +112,11 @@ footer li {
         width: 85%;
         margin-left: 25px;
     }
+    /* .login-img {
+        height: 170px !important;
+        width: 100%;
+        margin-top: 20px !important;
+    } */
 }
 
 /* media query for big landscape tablets, laptops, and desktop */
@@ -130,6 +135,11 @@ footer li {
         width: 80% !important;
         margin-left: 20px;
     }
+    .login-img {
+        height: 180px !important;
+        width: 100%;
+        margin-top: 20px !important;
+    }
 }
 
 /* media query for hi-res laptops and desktops */
@@ -145,7 +155,7 @@ footer li {
         margin-left: 55px;
     }
     .login-img {
-        height: 200px;
+        height: 220px !important;
         width: 100%;
         margin-top: 20px;
     }

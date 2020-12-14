@@ -198,10 +198,10 @@ When deplying locally, you will need to follow the below steps:
 ### Code 
 
 * CSS
-  * Stack Overflow was very helpful in assisting me with questions I needed to be answered to create the style sheet.
+  * 
 
 * Main page HTML -
-  * Some of the HTML5 was copied from BootstrapCDN and modified for layout and responsiveness.
+  * 
 
 * Main page JS -
   * The javascript used for the quiz was influenced by:
