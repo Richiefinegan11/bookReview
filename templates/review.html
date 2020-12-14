@@ -22,39 +22,39 @@
 </div>
 
 <h3 class="center-align">Browse Our Book Reviews</h3>
-
+{% if books|length > 0 %}
 <!-- shows books that have been review and uploaded to the database -->
 <div class="row">
-  {% for book in books %}
-  <div class="col s12 m4 l3">
-    <div class="card">
-      <div class="card-image">
-        <img
-          class="book-image activator responsive-img"
-          src="{{ book.image }}"
-        />
-      </div>
-      <div class="card-content">
-        <span class="card-title activator">
-          See Review
-        </span>
-        <p><b>{{ book.book_title }}</b> - {{ book.author }} </p>
-        <p> Genre: {{ book.genre }}</p>
-        <p> Buy it now: <a href="https://www.amazon.com/books-used-books-textbooks/b?ie=UTF8&node=283155">www.amazon.com/neverjudgeabook</a></p>  
-      </div>
-      <div class="card-reveal">
-        <span class="card-title"
-          >{{ book.book_title }}<i class="fas fa-window-close right"></i></span
-        >
-        <p>Book Review: <br> {{ book.review }}</p>
-        <br>
-        <p>Reviewed by: {{ book.created_by }}</p>
-      </div>
+    {% for book in books %}
+    <div class="col s12 m4 l3">
+        <div class="card">
+            <div class="card-image">
+                <img class="book-image activator responsive-img" src="{{ book.image }}" />
+            </div>
+            <div class="card-content">
+                <span class="card-title activator">
+                    See Review
+                </span>
+                <p><b>{{ book.book_title }}</b> - {{ book.author }} </p>
+                <p> Genre: {{ book.genre }}</p>
+                <p> Buy it now: <a
+                        href="https://www.amazon.com/books-used-books-textbooks/b?ie=UTF8&node=283155">www.amazon.com/neverjudgeabook</a>
+                </p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title">{{ book.book_title }}<i class="fas fa-window-close right"></i></span>
+                <p>Book Review: <br> {{ book.review }}</p>
+                <br>
+                <p>Reviewed by: {{ book.created_by }}</p>
+            </div>
+        </div>
     </div>
-  </div>
-  {% endfor %}
+    {% endfor %}
 </div>
 <div class="center-align">
     <a class="back-to-top" href="{{ url_for('review') }}"><i class="fas fa-arrow-up"></i> Back To Top</a>
 </div>
+{% else %}
+<h4 class="center-align">No Books Found</h4>
+{% endif %}
 {% endblock %}
