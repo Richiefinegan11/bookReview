@@ -55,6 +55,6 @@
     <a class="back-to-top" href="{{ url_for('review') }}"><i class="fas fa-arrow-up"></i> Back To Top</a>
 </div>
 {% else %}
-<h4 class="center-align">No Books Found</h4>
+<h5 class="center-align">No books found! Why not write this book's <a href="{{ url_for('write_review') }}">review</a> yourself?</h5>
 {% endif %}
 {% endblock %}
