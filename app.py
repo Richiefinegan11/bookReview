@@ -20,6 +20,9 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if session.get('user'):
+        return redirect(url_for("review"))
+
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -44,6 +47,9 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    if session.get('user'):
+        return redirect(url_for("review"))
+
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
