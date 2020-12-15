@@ -130,7 +130,7 @@ footer li {
         width: 85%;
         margin-left: 40px;
     }
-    #profile-card {
+    .profile-card {
         width: 80% !important;
         margin-left: 20px;
     }
