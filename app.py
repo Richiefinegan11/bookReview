@@ -17,6 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# regestering a user to the db
 @app.route("/")
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -45,6 +46,7 @@ def register():
     return render_template("register.html")
 
 
+# login page for the user
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if session.get('user'):
@@ -73,6 +75,7 @@ def login():
     return render_template("login.html")
 
 
+# profile page for the user
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     if session["user"]:
@@ -109,21 +112,26 @@ def logout():
     return redirect(url_for("login"))
 
 
+# book review page
 @app.route("/review")
 def review():
     books = list(mongo.db.books.find())
     return render_template("review.html", books=books)
 
 
+# search bar for book review page
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    # uses form to get text from the db
     query = request.form.get("query")
     books = list(mongo.db.books.find({"$text": {"$search": query}}))
     return render_template("review.html", books=books)
 
 
+# write review page
 @app.route("/write_review", methods=["GET", "POST"])
 def write_review():
+    # inserts 'review' details to db
     if request.method == "POST":
         review = {
             "book_title": request.form.get("book_title"),
@@ -140,8 +148,10 @@ def write_review():
     return render_template("write_review.html")
 
 
+# edit review page
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
+    # inserts amended info to db
     if request.method == "POST":
         submit = {
             "book_title": request.form.get("book_title"),
@@ -154,18 +164,21 @@ def edit_review(review_id):
         mongo.db.books.update({"_id": ObjectId(review_id)}, submit)
         flash("Your Review Has Been Updated")
         return redirect(url_for("profile", username=session["user"]))
-
+    # finds current info for form
     review = mongo.db.books.find_one({"_id": ObjectId(review_id)})
     return render_template("edit_review.html", review=review)
 
 
+# delete review page
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
+    # removes the review by grabbing the object id
     mongo.db.books.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
     return redirect(url_for("profile", username=session["user"]))
 
 
+# delete account page
 @app.route("/delete_account", methods=["GET", "POSTS"])
 def delete_account():
     if session.get('user'):
@@ -177,6 +190,7 @@ def delete_account():
     return redirect(url_for("login"))
 
 
+# removes user from the db
 @app.route("/delete_account_confirmed", methods=["GET", "POST"])
 def delete_account_confirmed():
     mongo.db.users.remove({"username": session["user"]})
